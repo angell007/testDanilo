@@ -82,6 +82,13 @@ class ClienteController extends Controller
             try {
                 $cliente = Cliente::findOrFail($request->id);
                 $cliente->update(request()->all());
+                if ($request->has('file')) {
+                    File::delete(public_path('/img_perfiles/' . $cliente->foto));
+                    $filename = '_' . time() . '.' . $request->file('file')->getClientOriginalExtension();
+                    $request->file('file')->move(public_path() . "/img_perfiles", $filename);
+                    $cliente->foto = $filename;
+                    $cliente->save();
+                }
                 return response()->json('Cliente actualizado correctamente', 200);
             } catch (\Throwable $th) {
                 return  response()->json($th->getMessage(), 400);

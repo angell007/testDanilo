@@ -30,6 +30,7 @@
                             <tr>
                                 <th>S. No</th>
                                 <th>Name</th>
+                                <th>Img</th>
                                 <th>Email</th>
                                 <th>Direccion</th>
                                 <th>Telefono</th>

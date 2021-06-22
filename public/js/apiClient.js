@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
             data: 'fullname',
             name: 'fullname'
         },
+         {
+                data: 'serie',
+                render: function (data, type, row, meta) {
+                    return `<img style="height: 150px" src="/img_perfiles/${row.foto}"  </img>`;
+                }
+        },
         {
             data: 'email',
             name: 'email'

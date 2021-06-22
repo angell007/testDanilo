@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "5cbd3f36-81be-468c-82f9-4142c956e875",
+		"name": "backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registrar cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Dani",
+							"type": "text"
+						},
+						{
+							"key": "apellidos",
+							"value": "grisalez",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "juan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "3172603279",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Dev/Pictures/82428876_1024854581220337_7558880533854289920_o.jpg"
+						},
+						{
+							"key": "direccion",
+							"value": "una direccion bien cool",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://testdanilo.operacionsistemica.com/api/clientes",
+					"protocol": "http",
+					"host": [
+						"testdanilo",
+						"operacionsistemica",
+						"com"
+					],
+					"path": [
+						"api",
+						"clientes"
+					]
+				},
+				"description": "creacion de clientes \r\nmethod post \r\nparams:\r\ntelefono\r\ndireccion\r\nnombre\r\napellido\r\nfile"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Dani",
+							"type": "text"
+						},
+						{
+							"key": "apellidos",
+							"value": "grisalez",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jhon@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "3172603279",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Dev/Pictures/82428876_1024854581220337_7558880533854289920_o.jpg"
+						},
+						{
+							"key": "direccion",
+							"value": "una direccion bien cool",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "18",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://testdanilo.operacionsistemica.com/api/clientes/update? _method=PATCH",
+					"protocol": "http",
+					"host": [
+						"testdanilo",
+						"operacionsistemica",
+						"com"
+					],
+					"path": [
+						"api",
+						"clientes",
+						"update"
+					],
+					"query": [
+						{
+							"key": " _method",
+							"value": "PATCH"
+						}
+					]
+				},
+				"description": "actualizar cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://testdanilo.operacionsistemica.com/api/clientes/15",
+					"protocol": "http",
+					"host": [
+						"testdanilo",
+						"operacionsistemica",
+						"com"
+					],
+					"path": [
+						"api",
+						"clientes",
+						"15"
+					]
+				},
+				"description": "elimina cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "todos clientes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://testdanilo.operacionsistemica.com/api/clientes",
+					"protocol": "http",
+					"host": [
+						"testdanilo",
+						"operacionsistemica",
+						"com"
+					],
+					"path": [
+						"api",
+						"clientes"
+					]
+				},
+				"description": "obtener todos los clientes"
+			},
+			"response": []
+		},
+		{
+			"name": "registrar viajes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Dev/Desktop/viajes.xml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://testdanilo.operacionsistemica.com/api/viajes",
+					"protocol": "http",
+					"host": [
+						"testdanilo",
+						"operacionsistemica",
+						"com"
+					],
+					"path": [
+						"api",
+						"viajes"
+					]
+				},
+				"description": "guardando archivo con viajes"
+			},
+			"response": []
+		},
+		{
+			"name": "todos viajes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://testdanilo.operacionsistemica.com/api/viajes",
+					"protocol": "http",
+					"host": [
+						"testdanilo",
+						"operacionsistemica",
+						"com"
+					],
+					"path": [
+						"api",
+						"viajes"
+					]
+				},
+				"description": "obtener viajes"
+			},
+			"response": []
+		},
+		{
+			"name": "todos clientes filtrados",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://testdanilo.operacionsistemica.com/api/clientes?id=1&nombre=dan&email=ho",
+					"protocol": "http",
+					"host": [
+						"testdanilo",
+						"operacionsistemica",
+						"com"
+					],
+					"path": [
+						"api",
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "nombre",
+							"value": "dan"
+						},
+						{
+							"key": "email",
+							"value": "ho"
+						}
+					]
+				},
+				"description": "se filtra por id, por nombre, y por email"
+			},
+			"response": []
+		}
+	]
+}
