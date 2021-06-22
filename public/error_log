@@ -1,0 +1,1 @@
+[04-Jun-2021 13:28:03 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\ServicioController, because the name is already in use in /home/operac/public_html/back-gestion-vehiculos/main/app/Http/Controllers/SolicitudController.php on line 0
